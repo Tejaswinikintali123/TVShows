@@ -1,0 +1,16 @@
+<div class="show-items">
+    <div *ngFor="let show of showDetails" class="show-item">
+        <a routerLink="/details/{{ show.id }}" class="anchor">
+          <mat-card class="show-card">
+            <mat-card-header class="header">
+              <mat-card-title>{{ show?.name }}</mat-card-title>
+              <!-- <mat-card-subtitle>
+                <div><span>Genres :</span> {{ show?.genres }}</div>
+                <div><span>Rating :</span> {{ show?.rating }}</div>
+              </mat-card-subtitle> -->
+            </mat-card-header>
+            <img mat-card-image [src]="show?.image" />
+          </mat-card>
+        </a>
+    </div>
+</div>

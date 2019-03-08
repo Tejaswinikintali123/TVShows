@@ -1,0 +1,14 @@
+<form>
+  <mat-form-field>
+    <mat-icon matPrefix>search</mat-icon>
+    <input
+      matInput
+      placeholder="Enter show name"
+      type="text"
+      aria-label="name"
+      [formControl]="search"
+    />
+    <mat-hint>enter more that one letter</mat-hint>
+    <mat-error *ngIf="search.invalid"> type more that one letter </mat-error>
+  </mat-form-field>
+</form>

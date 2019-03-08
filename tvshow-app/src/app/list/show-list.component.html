@@ -1,0 +1,5 @@
+<app-tv-search (searchEvent)="doSearch($event)"></app-tv-search>
+<div *ngIf="tvShow?.length > 0">
+    <h2>Search results</h2>
+    <app-show-time [showDetails]="tvShow"></app-show-time>
+</div>

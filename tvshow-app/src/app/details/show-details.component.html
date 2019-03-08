@@ -1,0 +1,24 @@
+<a routerLink="">Back to list</a>
+<div *ngIf="showDetails">
+  <mat-card class="show-card">
+    <mat-card-header class="header">
+      <mat-card-title>{{ showDetails.name }}</mat-card-title>
+      <mat-card-subtitle>
+        <div><span>Genres :</span> {{ showDetails.genres }}</div>
+        <div><span>Language :</span> {{ showDetails?.language }}</div>
+        <div><span>Network :</span> {{ showDetails?.network?.name }}</div>
+        <div><span>Rating :</span> {{ showDetails?.rating?.average }}</div>
+        <div><span>Runtime :</span> {{ showDetails.runtime }} Minutes</div>
+        <div>
+          <span>Schedule :</span>
+          {{ showDetails?.schedule?.time }},{{ showDetails.schedule?.days }}.
+        </div>
+      </mat-card-subtitle>
+    </mat-card-header>
+    <img mat-card-image [src]="showDetails.image.medium" />
+    <mat-card-content>
+      <div [innerHTML]="showDetails.summary"></div>
+    </mat-card-content>
+  </mat-card>
+</div>
+<!-- <a routerLink="">Back to list</a> -->
