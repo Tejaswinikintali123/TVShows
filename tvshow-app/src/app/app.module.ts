@@ -8,6 +8,7 @@ import { ShowTimeService } from "./showtime.service";
 import { HttpClientModule } from "@angular/common/http";
 import { TvSearchComponent } from "./tv-search/tv-search.component";
 import { FormsModule, ReactiveFormsModule } from "@angular/forms";
+import { FlexLayoutModule } from '@angular/flex-layout';
 import {
   MatButtonModule,
   MatToolbarModule,
@@ -42,6 +43,7 @@ import { ShowListComponent } from "./list/show-list.component";
     MatFormFieldModule,
     MatInputModule,
     MatGridListModule,
+    FlexLayoutModule
   ],
   exports: [
     ReactiveFormsModule,
@@ -55,6 +57,7 @@ import { ShowListComponent } from "./list/show-list.component";
     MatInputModule,
     BrowserAnimationsModule,
     MatGridListModule,
+    FlexLayoutModule,
   ],
 
   providers: [ShowTimeService],
