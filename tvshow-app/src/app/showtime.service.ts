@@ -3,6 +3,8 @@ import { HttpClient } from "@angular/common/http";
 import { environment } from "src/environments/environment";
 import { IShowTime } from "./ishow-time";
 import { map } from "rxjs/operators";
+import { Observable, of } from "rxjs";
+
 // interface IShowTimeData {
 //   name: string;
 //   genres: string[0];
@@ -17,6 +19,13 @@ import { map } from "rxjs/operators";
 //     medium: string,
 //   };
 //   summary: string;
+// }
+// export interface IShowTimeService {
+//   getshowTime(name: string): Observable<IShowTime>;
+
+//   getExistingSearchData(): IShowTime[];
+
+//   getShowById(id: number): IShowTime;
 // }
 
 @Injectable({

@@ -1,12 +1,18 @@
-import { TestBed } from '@angular/core/testing';
+import { TestBed, inject } from "@angular/core/testing";
 
-import { ShowTimeService } from './showtime.service';
+import { ShowTimeService } from "./showtime.service";
+import { HttpClientTestingModule } from "@angular/common/http/testing";
 
-describe('ShowtimeService', () => {
-  beforeEach(() => TestBed.configureTestingModule({}));
+describe("ShowtimeService", () => {
+  beforeEach(() =>
+    TestBed.configureTestingModule({
+      imports: [HttpClientTestingModule],
+      providers: [ShowTimeService]
+    }));
 
-  it('should be created', () => {
-    const service: ShowTimeService = TestBed.get(ShowTimeService);
-    expect(service).toBeTruthy();
-  });
+ it('should be created', inject([ShowTimeService],
+  (service: ShowTimeService)=>{
+    expect(service).toBeTruthy()
+}) )
 });
+             

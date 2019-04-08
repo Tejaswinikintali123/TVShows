@@ -1,6 +1,8 @@
 import { async, ComponentFixture, TestBed } from "@angular/core/testing";
-
+import { RouterTestingModule } from "@angular/router/testing";
 import { ShowDetailsComponent } from "./show-details.component";
+import { CUSTOM_ELEMENTS_SCHEMA } from "@angular/core";
+import { HttpClientModule } from "@angular/common/http";
 
 describe("ShowDetailsComponent", () => {
   let component: ShowDetailsComponent;
@@ -8,7 +10,9 @@ describe("ShowDetailsComponent", () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ShowDetailsComponent]
+      imports: [RouterTestingModule, HttpClientModule],
+      declarations: [ShowDetailsComponent],
+      schemas: [CUSTOM_ELEMENTS_SCHEMA]
     }).compileComponents();
   }));
 

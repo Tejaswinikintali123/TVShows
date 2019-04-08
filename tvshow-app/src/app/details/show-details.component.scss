@@ -1,7 +1,16 @@
-.show-card{
-    max-width: 400px;
-    margin: 20px;
-    .header {
-        text-align: left;
+.show-items {
+    display: flex;
+    flex-direction: row;
+  
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    //grid-template-columns: auto auto auto auto auto;
+    padding: 10px;
+    //    .show-item {
+    //     font-size: 30px;
+    .anchor {
+      text-decoration: none;
     }
-}
+    //}
+  }
+  
